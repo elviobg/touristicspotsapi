@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'attraction',
     'comments',
     'reviews',
+    'localization',
 ]
 
 MIDDLEWARE = [

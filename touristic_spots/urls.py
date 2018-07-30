@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import url, include
+from rest_framework import routers
+from core.api.viewsets import SpotViewSet
+
+router = routers.DefaultRouter()
+router.register(r'spot', SpotViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include(router.urls)),    
 ]

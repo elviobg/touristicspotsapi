@@ -21,12 +21,14 @@ from core.api.viewsets import SpotViewSet
 from attraction.api.viewsets import AttractionViewSet
 from localization.api.viewsets import LocalizationViewSet
 from comments.api.viewsets import CommentViewSet
+from reviews.api.viewsets import ReviewViewSet
 
 router = routers.DefaultRouter()
 router.register(r'spots', SpotViewSet)
 router.register(r'attractions', AttractionViewSet)
 router.register(r'localizations', LocalizationViewSet)
 router.register(r'comments', CommentViewSet)
+router.register(r'reviews', ReviewViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

@@ -19,10 +19,12 @@ from django.conf.urls import url, include
 from rest_framework import routers
 from core.api.viewsets import SpotViewSet
 from attraction.api.viewsets import AttractionViewSet
+from localization.api. viewsets import LocalizationViewSet
 
 router = routers.DefaultRouter()
 router.register(r'spot', SpotViewSet)
 router.register(r'attraction', AttractionViewSet)
+router.register(r'localization', LocalizationViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

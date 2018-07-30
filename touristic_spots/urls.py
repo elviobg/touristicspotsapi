@@ -18,11 +18,13 @@ from django.urls import path
 from django.conf.urls import url, include
 from rest_framework import routers
 from core.api.viewsets import SpotViewSet
+from attraction.api.viewsets import AttractionViewSet
 
 router = routers.DefaultRouter()
 router.register(r'spot', SpotViewSet)
+router.register(r'attraction', AttractionViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(router.urls)),    
+    path('', include(router.urls)),
 ]

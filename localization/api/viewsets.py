@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from touristic_spots.localization.models import Localization
-from touristic_spots.localization.api.serializers import LocalizationSerializer
+from localization.models import Localization
+from localization.api.serializers import LocalizationSerializer
 
 
 class LocalizationViewSet(viewsets.ModelViewSet):

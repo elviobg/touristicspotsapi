@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from touristic_spots.core.models import Spot
-from touristic_spots.core.api.serializers import SpotSerializer
+from core.models import Spot
+from core.api.serializers import SpotSerializer
 
 
 class SpotViewSet(viewsets.ModelViewSet):

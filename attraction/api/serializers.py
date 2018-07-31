@@ -1,5 +1,5 @@
 from rest_framework.serializers import ModelSerializer
-from touristic_spots.attraction.models import Attraction
+from attraction.models import Attraction
 
 
 class AttractionSerializer(ModelSerializer):

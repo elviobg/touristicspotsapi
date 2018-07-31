@@ -1,8 +1,8 @@
 from django.db import models
-from touristic_spots.attraction.models import Attraction
-from touristic_spots.comments.models import Comment
-from touristic_spots.reviews.models import Review
-from touristic_spots.localization.models import Localization
+from attraction.models import Attraction
+from comments.models import Comment
+from reviews.models import Review
+from localization.models import Localization
 
 
 class Spot(models.Model):

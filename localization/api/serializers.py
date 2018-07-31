@@ -1,5 +1,5 @@
 from rest_framework.serializers import ModelSerializer
-from touristic_spots.localization.models import Localization
+from localization.models import Localization
 
 
 class LocalizationSerializer(ModelSerializer):

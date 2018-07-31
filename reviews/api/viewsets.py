@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from touristic_spots.reviews.models import Review
-from touristic_spots.reviews.api.serializers import ReviewSerializer
+from reviews.models import Review
+from reviews.api.serializers import ReviewSerializer
 
 
 class ReviewViewSet(viewsets.ModelViewSet):

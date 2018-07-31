@@ -1,7 +1,8 @@
 from rest_framework import viewsets
-from comments.models import Comment
-from comments.api.serializers import CommentSerializer
+from touristic_spots.comments.models import Comment
+from touristic_spots.comments.api.serializers import CommentSerializer
+
 
 class CommentViewSet(viewsets.ModelViewSet):
-  queryset = Comment.objects.all()
-  serializer_class = CommentSerializer
+    queryset = Comment.objects.all()
+    serializer_class = CommentSerializer

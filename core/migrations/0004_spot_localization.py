@@ -15,7 +15,9 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='spot',
             name='localization',
-            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, to='localization.Localization'),
+            field=models.ForeignKey(default=1,
+                                    on_delete=django.db.models.deletion.CASCADE,
+                                    to='localization.Localization'),
             preserve_default=False,
         ),
     ]

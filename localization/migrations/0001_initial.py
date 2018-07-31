@@ -4,7 +4,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
@@ -14,9 +13,11 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Localization',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True, primary_key=True,
+                                        serialize=False, verbose_name='ID')),
                 ('line1', models.CharField(max_length=128)),
-                ('line2', models.CharField(blank=True, max_length=128, null=True)),
+                ('line2',
+                 models.CharField(blank=True, max_length=128, null=True)),
                 ('city', models.CharField(max_length=128)),
                 ('state', models.CharField(max_length=128)),
                 ('country', models.CharField(max_length=128)),

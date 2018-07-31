@@ -5,30 +5,34 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('core', '0004_spot_localization'),
     ]
-
+    
     operations = [
         migrations.AlterField(
             model_name='spot',
             name='attractions',
-            field=models.ManyToManyField(blank=True, null=True, to='attraction.Attraction'),
+            field=models.ManyToManyField(blank=True, null=True,
+                                         to='attraction.Attraction'),
         ),
         migrations.AlterField(
             model_name='spot',
             name='comments',
-            field=models.ManyToManyField(blank=True, null=True, to='comments.Comment'),
+            field=models.ManyToManyField(blank=True, null=True,
+                                         to='comments.Comment'),
         ),
         migrations.AlterField(
             model_name='spot',
             name='localization',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='localization.Localization'),
+            field=models.ForeignKey(blank=True, null=True,
+                                    on_delete=django.db.models.deletion.CASCADE,
+                                    to='localization.Localization'),
         ),
         migrations.AlterField(
             model_name='spot',
             name='review',
-            field=models.ManyToManyField(blank=True, null=True, to='reviews.Review'),
+            field=models.ManyToManyField(blank=True, null=True,
+                                         to='reviews.Review'),
         ),
     ]

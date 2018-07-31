@@ -1,26 +1,16 @@
 from rest_framework import viewsets
 from core.models import Spot
-from core.api.serializers import SpotSerializer
+from django_filters.rest_framework import DjangoFilterBackend
+from .serializers import SpotSerializer
 
 
 class SpotViewSet(viewsets.ModelViewSet):
-    # queryset = Spot.objects.all().order_by('-id')
     serializer_class = SpotSerializer
+    filter_backends = (DjangoFilterBackend,)
+    filter_fields = ('name', 'description', )
 
     def get_queryset(self):
-        params = self.request.query_params
-        pk = params.get('id', None)
-        name = params.get('name', None)
-        description = params.get('description', None)
-        querySet = Spot.objects.all().filter(approved=True)
-
-        if pk:
-            querySet = querySet.filter(pk=pk)
-        if name:
-            querySet = querySet.filter(name__icontains=name)
-        if description:
-            querySet = querySet.filter(description__icontains=description)
-        return querySet
+        return Spot.objects.all().filter(approved=True)
 
     # método de sobrescrita das chamadas padrão
     # list, create, destroy, retrieve, update, partial_update

@@ -12,6 +12,7 @@ class Spot(models.Model):
   comments = models.ManyToManyField(Comment, null=True, blank=True)
   review = models.ManyToManyField(Review, null=True, blank=True)
   localization = models.ForeignKey(Localization, on_delete=models.CASCADE, null=True, blank=True)
+  image = models.ImageField(upload_to='spots', null=True, blank=True)
 
   def __str__(self):
     return self.name

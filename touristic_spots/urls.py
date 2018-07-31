@@ -19,6 +19,7 @@ from django.conf.urls import url, include
 from rest_framework import routers
 from django.conf import settings
 from django.conf.urls.static import static
+from rest_framework.authtoken.views import obtain_auth_token
 from core.api.viewsets import SpotViewSet
 from attraction.api.viewsets import AttractionViewSet
 from localization.api.viewsets import LocalizationViewSet
@@ -35,4 +36,5 @@ router.register(r'reviews', ReviewViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
+    path('api-token-auth/', obtain_auth_token),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
